@@ -1,6 +1,7 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Controller
 {
@@ -10,7 +11,7 @@ public class Controller
 	{
 		String a[] = new String[]{ "arp", "live", "strong" };
     	String b[] = new String[] { "lively", "alive", "harp", "sharp", "armstrong" };
- 		inArray(a,b);
+ 		inArray(a,b).toString();
 	}
 	
 	
@@ -43,7 +44,10 @@ public class Controller
 		String returnArr[] = new String[returnMeList.size()];
 		for(int i = 0; i < returnArr.length; i++)
 		{
-			
+			returnArr[i] = returnMeList.get(i);
+			System.out.println(Arrays.deepToString(returnArr));
 		}
+		
+		return returnArr;
 	}
 }
