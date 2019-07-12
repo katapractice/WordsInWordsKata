@@ -9,8 +9,8 @@ public class Controller
 	
 	public void start()
 	{
-		String a[] = new String[]{ "arp", "live", "strong" };
-    	String b[] = new String[] { "lively", "alive", "harp", "sharp", "armstrong" };
+		String a[] = new String[]{ "tarp", "mice", "bull"};
+    	String b[] = new String[] {"lively", "alive", "harp", "sharp", "armstrong"};
  		inArray(a,b).toString();
 	}
 	
@@ -23,16 +23,16 @@ public class Controller
 		{
 			for(String word2:array2)
 			{
-				if(word1.length() < word2.length())
+				if(word1.length() <= word2.length())
 				{
-					if(word2.contains(word1) && returnMeList.contains(word1) == false)
+					if(word2.contains(word1) && returnMeList.indexOf(word1) == -1)
 					{
 						returnMeList.add(word1);
 					}
 				}
 				else
 				{
-					if(word1.contains(word2) && returnMeList.contains(word2) == false)
+					if(word1.contains(word2) && returnMeList.indexOf(word2) == -1)
 					{
 						returnMeList.add(word2);
 					}
@@ -40,7 +40,7 @@ public class Controller
 			}
 		}
 		
-		
+		java.util.Collections.sort(returnMeList);
 		String returnArr[] = new String[returnMeList.size()];
 		for(int i = 0; i < returnArr.length; i++)
 		{
