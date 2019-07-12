@@ -25,14 +25,14 @@ public class Controller
 			{
 				if(word1.length() < word2.length())
 				{
-					if(word2.contains(word1))
+					if(word2.contains(word1) && returnMeList.contains(word1) == false)
 					{
 						returnMeList.add(word1);
 					}
 				}
 				else
 				{
-					if(word2.contains(word1))
+					if(word1.contains(word2) && returnMeList.contains(word2) == false)
 					{
 						returnMeList.add(word2);
 					}
