@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.ArrayList;
+
 public class Controller
 {
 	
@@ -14,13 +16,20 @@ public class Controller
 	
 	private String[] inArray(String[] array1, String[] array2)
 	{
-		String returnMe[] = null;
+		ArrayList<String> returnMeList = new ArrayList<String>();
 		
 		for(String word1:array1)
 		{
 			for(String word2:array2)
 			{
-				if(word1.length() < word2.length());
+				if(word1.length() < word2.length())
+				{
+					if(word2.contains(word1))
+					{
+						
+					}
+				}
+				else
 				{
 					
 				}
@@ -31,4 +40,3 @@ public class Controller
 		return returnMe;
 	}
 }
- 
