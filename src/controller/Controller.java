@@ -30,13 +30,7 @@ public class Controller
 						returnMeList.add(word1);
 					}
 				}
-				else
-				{
-					if(word1.contains(word2) && returnMeList.indexOf(word2) == -1)
-					{
-						returnMeList.add(word2);
-					}
-				}
+				
 			}
 		}
 		
