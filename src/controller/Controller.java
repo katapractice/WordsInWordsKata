@@ -15,6 +15,10 @@ public class Controller
 	}
 	
 	
+	/**
+	 * @author Nick Haynes
+	 * 
+	 */
 	private String[] inArray(String[] array1, String[] array2)
 	{
 		ArrayList<String> returnMeList = new ArrayList<String>();
@@ -44,4 +48,17 @@ public class Controller
 		
 		return returnArr;
 	}
+	
+	
+	
+//	This was a particularly clever solution to the problem
+		  public static String[] inArrayClever(String[] array1, String[] array2) 
+		  {
+		    return Arrays.stream(array1)
+		      .filter(str ->
+		        Arrays.stream(array2).anyMatch(s -> s.contains(str)))
+		      .distinct()
+		      .sorted()
+		      .toArray(String[]::new);
+		  }
 }
