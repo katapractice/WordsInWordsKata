@@ -26,17 +26,24 @@ public class Controller
 				{
 					if(word2.contains(word1))
 					{
-						
+						returnMeList.add(word1);
 					}
 				}
 				else
 				{
-					
+					if(word2.contains(word1))
+					{
+						returnMeList.add(word2);
+					}
 				}
 			}
 		}
 		
 		
-		return returnMe;
+		String returnArr[] = new String[returnMeList.size()];
+		for(int i = 0; i < returnArr.length; i++)
+		{
+			
+		}
 	}
 }
